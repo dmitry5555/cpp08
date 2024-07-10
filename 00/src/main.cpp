@@ -1,7 +1,6 @@
-#include "Easyfind.hpp"
+#include "easyfind.hpp"
 
 template<typename T>
-
 
 void easyfind(T& container, int num) {
     typename T::iterator it = container.begin(); 
