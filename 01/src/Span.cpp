@@ -1,10 +1,16 @@
 #include "Span.hpp"
 
+Span::Span(unsigned int num) : _n(num) {
+	_vec.reserve(_n);
+}
+
+Span::~Span() {}
+
 void Span::addNumber(int num) {
-	_n++;
+	if (_vec.size() == _n) {
+		throw std::runtime_error("Vector is full");
+	}
 	_vec.push_back(num);
-	std::cout << "Number added: " << num << std::endl;
-	std::cout << "Size of vector: " << _vec.size() << std::endl;
 }
 
 int Span::shortestSpan() {

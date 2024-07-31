@@ -44,6 +44,13 @@
 		"memory_resource": "cpp",
 		"__split_buffer": "cpp",
 		"array": "cpp",
-		"vector": "cpp"
+		"vector": "cpp",
+		"stack": "cpp",
+		"__hash_table": "cpp",
+		"deque": "cpp",
+		"unordered_map": "cpp",
+		"__node_handle": "cpp",
+		"optional": "cpp",
+		"list": "cpp"
 	}
 }

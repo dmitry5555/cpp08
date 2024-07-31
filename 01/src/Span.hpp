@@ -13,9 +13,19 @@ class Span {
 		std::vector<int> _vec;
 
 	public:
+		Span(unsigned int size);
+		~Span();
 		void addNumber(int num);
 		int shortestSpan();
 		int longestSpan();
+		// шаблонная ф-я с итераторами
+		template <typename Iterator>
+		void addRange(Iterator begin, Iterator end) {
+			while (begin != end) {
+				addNumber(*begin);
+				++begin;
+			}
+		}
 };
 
 

@@ -1,7 +1,6 @@
 #include "easyfind.hpp"
 
 template<typename T>
-
 void easyfind(T& container, int num) {
     typename T::iterator it = container.begin(); 
     while (it != container.end()) {
@@ -11,6 +10,8 @@ void easyfind(T& container, int num) {
         }
         ++it;
     }
+	// can be solved with method std::find as well
+
     throw std::runtime_error("Number not found in container");
 };
 
@@ -24,6 +25,12 @@ int main(int argc, char **argv) {
     vec.push_back(3);
     vec.push_back(4);
 
-	easyfind(vec, 4);
+	try {
+        easyfind(vec, 9);  // 6 нет в векторе
+    } catch (const std::exception& e) {
+        std::cout << "Error: " << e.what() << std::endl;
+        return 1;  // Завершение программы с кодом ошибки
+    }
+
     return 0;
 }
